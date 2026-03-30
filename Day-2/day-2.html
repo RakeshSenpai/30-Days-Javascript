@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grandparent{
+        padding: 2rem;
+        width: 80%;
+        height: 80%;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        justify-content: center;
+        align-items: center;
+        background: #391235;
+
+        .parent{
+            height: 50%;
+            width: 50%;
+            padding: 0.8rem;
+            border: 2px solid red;
+            display: flex;
+            justify-content: space-evenly;
+            background: rgb(9, 60, 33);
+
+            .child{
+                height: 180px;
+                width: 200px;
+                background: #000;
+            }
+        }
+    }
+</style>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+        <div class="parent">
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+    </div>
+
+    <script src="day-2.js"></script>
+</body>
+</html>
