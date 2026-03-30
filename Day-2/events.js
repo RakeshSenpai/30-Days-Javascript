@@ -20,3 +20,4 @@ btn.addEventListener('click', (e)=> {
     newItem.innerText = 'Hi i am new here'
     div.appendChild(newItem)
 })
+
