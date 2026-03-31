@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, rgb(107, 175, 215), rgb(39, 112, 239));
+}
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    justify-content: center;
+    align-content: center;
+    grid-template-rows: minmax(120px , auto) repeat(5, 100px);
+}
+
+.container > button{
+    outline: none;
+    border: 2px solid white;
+    background: #9be6ff;
+    cursor: pointer;
+}
+
+.container > button:hover{
+    background: #9be6ff92;
+
+}
+
+.span-two{
+    grid-column: span 2;
+}
