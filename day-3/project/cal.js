@@ -1,12 +1,15 @@
-const buttons = document.querySelectorAll("button")
+const numberBtn = document.querySelectorAll('[data-value]')
+const deleteBtn = document.querySelector('[data-delete]')
+const allClearBtn = document.querySelector('[data-all-clear]')
+const equalsBtn = document.querySelector('[data-equal]')
+const operatorBtn = document.querySelectorAll('[data-operator]')
+const currentOperand = document.querySelector('.current-operand')
+const previousOperand = document.querySelector('.previous-operand')
 
-buttons.forEach(e => {
-    e.addEventListener('click', () => {
-        if(e.dataset.value){
-            console.log('Numbers:', e.dataset.value)
-        }
-        if(e.dataset.operator){
-            console.log('Operand:' , e.dataset.operator)
-        }
+numberBtn.forEach(e => {
+    let numbers = ''
+    e.addEventListener('click' , () => {
+            numbers += e.innerText
+            currentOperand.innerText = numbers
     })
 })
